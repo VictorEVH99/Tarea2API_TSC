@@ -3,7 +3,7 @@ import requests
 import json
 
 #FAKE API Books 
-url = 'https://fakerapi.it/api/v1/books?_quantity=5'
+url = 'https://fakerapi.it/api/v1/books?_quantity=20'
 
 #Realizando la solicitud HTTP GET a la API
 response = requests.get(url)
