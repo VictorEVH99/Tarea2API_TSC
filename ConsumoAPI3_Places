@@ -1,0 +1,19 @@
+!pip install requests
+import requests
+import json
+
+#FAKE API Books
+url_api3 = 'https://fakerapi.it/api/v1/places?_quantity=50'
+
+#Realizando la solicitud HTTP GET a la API
+response = requests.get(url_api3)
+
+#Verificando si la solicitud fue exitosa
+if response.status_code == 200:
+            #Convertimos la respuesta JSON a un diccionario de Python
+            data = response.json()
+            # Devolver los datos obtenidos de la API en formato JSON
+            print(json.dumps(data,indent=5))
+else:
+            # Si la solicitud no fue exitosa, imprimir el código de estado
+            print("Error, no se pudo realizar la solicitud", response.status_code)
